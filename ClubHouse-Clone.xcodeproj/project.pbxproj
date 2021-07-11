@@ -13,6 +13,12 @@
 		7B8C1B00269A1B74000B7B35 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B8C1AFF269A1B74000B7B35 /* Preview Assets.xcassets */; };
 		7B8C1B0B269A1B74000B7B35 /* ClubHouse_CloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8C1B0A269A1B74000B7B35 /* ClubHouse_CloneTests.swift */; };
 		7B8C1B16269A1B74000B7B35 /* ClubHouse_CloneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8C1B15269A1B74000B7B35 /* ClubHouse_CloneUITests.swift */; };
+		7BFA06B7269B8FB7003DB94B /* RoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFA06B4269B8FB7003DB94B /* RoomView.swift */; };
+		7BFA06B8269B8FB7003DB94B /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFA06B5269B8FB7003DB94B /* TabBarView.swift */; };
+		7BFA06B9269B8FB7003DB94B /* TagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFA06B6269B8FB7003DB94B /* TagsView.swift */; };
+		7BFA06BE269B8FCB003DB94B /* models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFA06BD269B8FCB003DB94B /* models.swift */; };
+		7BFA06C4269B8FD9003DB94B /* CurrentRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFA06C2269B8FD9003DB94B /* CurrentRoomView.swift */; };
+		7BFA06C5269B8FD9003DB94B /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFA06C3269B8FD9003DB94B /* HeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +51,12 @@
 		7B8C1B11269A1B74000B7B35 /* ClubHouse-CloneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ClubHouse-CloneUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B8C1B15269A1B74000B7B35 /* ClubHouse_CloneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubHouse_CloneUITests.swift; sourceTree = "<group>"; };
 		7B8C1B17269A1B74000B7B35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BFA06B4269B8FB7003DB94B /* RoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomView.swift; sourceTree = "<group>"; };
+		7BFA06B5269B8FB7003DB94B /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		7BFA06B6269B8FB7003DB94B /* TagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsView.swift; sourceTree = "<group>"; };
+		7BFA06BD269B8FCB003DB94B /* models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = models.swift; sourceTree = "<group>"; };
+		7BFA06C2269B8FD9003DB94B /* CurrentRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentRoomView.swift; sourceTree = "<group>"; };
+		7BFA06C3269B8FD9003DB94B /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +108,13 @@
 			isa = PBXGroup;
 			children = (
 				7B8C1AF8269A1B72000B7B35 /* ClubHouse_CloneApp.swift */,
+				7BFA06C3269B8FD9003DB94B /* HeaderView.swift */,
+				7BFA06B5269B8FB7003DB94B /* TabBarView.swift */,
+				7BFA06BD269B8FCB003DB94B /* models.swift */,
+				7BFA06C2269B8FD9003DB94B /* CurrentRoomView.swift */,
 				7B8C1AFA269A1B72000B7B35 /* ContentView.swift */,
+				7BFA06B4269B8FB7003DB94B /* RoomView.swift */,
+				7BFA06B6269B8FB7003DB94B /* TagsView.swift */,
 				7B8C1AFC269A1B74000B7B35 /* Assets.xcassets */,
 				7B8C1B01269A1B74000B7B35 /* Info.plist */,
 				7B8C1AFE269A1B74000B7B35 /* Preview Content */,
@@ -259,6 +277,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BFA06C4269B8FD9003DB94B /* CurrentRoomView.swift in Sources */,
+				7BFA06C5269B8FD9003DB94B /* HeaderView.swift in Sources */,
+				7BFA06BE269B8FCB003DB94B /* models.swift in Sources */,
+				7BFA06B7269B8FB7003DB94B /* RoomView.swift in Sources */,
+				7BFA06B8269B8FB7003DB94B /* TabBarView.swift in Sources */,
+				7BFA06B9269B8FB7003DB94B /* TagsView.swift in Sources */,
 				7B8C1AFB269A1B72000B7B35 /* ContentView.swift in Sources */,
 				7B8C1AF9269A1B72000B7B35 /* ClubHouse_CloneApp.swift in Sources */,
 			);
