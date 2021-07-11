@@ -10,21 +10,22 @@ import SwiftUI
 struct CurrentRoomView: View {
     var roomname: String
     var description: String
-    var participantNumber : String
+    var participants : String
+    var speakers: String
     var body: some View{
         NavigationLink(destination: RoomView()){
             HStack{
                 HStack{
                     VStack(alignment:.leading){
                         VStack(alignment:.leading){
-                            Text("Startup club")
+                            Text(roomname)
                                 .bold()
                                 .textCase(.uppercase)
                                 .frame(maxWidth:.infinity, alignment:.leading)
                                 .foregroundColor(Color.black)
-                            Text("Pitch your startup ideas to VC \n Entrepreneurs")
+                            Text(description)
                                 .foregroundColor(Color.gray)
-                                .font(.subheadline)
+                                .font(.body)
                                 .padding(.top,1)
 
 //                            Text("Entrepreneurs")
@@ -36,7 +37,7 @@ struct CurrentRoomView: View {
                         .padding(.top,25)
                         
                         HStack{
-                            Image("1")
+                            Image("5")
                                 .resizable()
                                 .scaledToFill()
                                 .frame(width:30, height:30)
@@ -66,13 +67,13 @@ struct CurrentRoomView: View {
                                 Image(systemName: "person.fill")
                                     .font(.subheadline)
                                     .foregroundColor(Color.black)
-                                Text("354")
+                                Text(participants)
                                     .font(.subheadline)
                                     .foregroundColor(Color.black)
                                 Image(systemName: "mic.fill")
                                     .font(.subheadline)
                                     .foregroundColor(Color.black)
-                                Text("354")
+                                Text(speakers)
                                     .font(.subheadline)
                                     .foregroundColor(Color.black)
                             }
@@ -97,7 +98,7 @@ struct CurrentRoomView: View {
 
 struct CurrentRoomView_Previews: PreviewProvider {
     static var previews: some View {
-        CurrentRoomView(roomname: "Startup club", description: "Pitch your startup ideas to VC \n Entrepreneurs", participantNumber: "354")
+        CurrentRoomView(roomname: "Startup club", description: "Pitch your startup ideas to VC \n Entrepreneurs", participants: "354", speakers: "200")
     }
 }
 

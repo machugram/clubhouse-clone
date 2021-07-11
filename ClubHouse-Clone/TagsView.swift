@@ -7,11 +7,10 @@
 
 import SwiftUI
 var tags : [iTag] = [
-    iTag(name:"🕊 Twitter"),
+    iTag(name:"🕊 Spiritual"),
     iTag(name:"👨🏼‍💻 SwiftUI"),
-    iTag(name: "🎨 Design"),
-    iTag(name: "🎯 Figma"),
-    iTag(name: "👀 Clone")
+    iTag(name: "🎨 Art"),
+    iTag(name: "🎯 Productivity"),
 ]
 struct TagsView: View {
     var body: some View {

@@ -12,20 +12,28 @@ struct TabBarView: View {
         HStack{
             Button(action: {}){
                 Image(systemName: "calendar")
-                //Spacer()
+                .padding()
+
             }.foregroundColor(Color(.black))
             Spacer()
 
             //.frame(width: 100)
             Button(action: {}){
                 Image(systemName: "plus.circle.fill")
-                    .padding(10)
+                .padding()
                 Text("Start a room")
             }.foregroundColor(Color(.black))
-            
                 Spacer()
+            
+            Button(action: {}){
                 Image(systemName: "person.fill")
+                .padding()
+            }
+            .foregroundColor(.black)
         }
+        .frame(width: 375, height: 100)
+        .background(Color("indigo"))
+
     }
 }
 

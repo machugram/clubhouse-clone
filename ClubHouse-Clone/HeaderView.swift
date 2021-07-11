@@ -15,11 +15,12 @@ struct HeaderView: View {
             
             Spacer()
            // Image(systemName: "magnifyingglass").font(.title3)
+            Button(action:{}){
                 Image("1")
                     .resizable()
                     .scaledToFill()
                     .frame(width:30, height:30)
-                    .padding(2)
+                    .padding(2)}
                   //  .background(RoundedRectangle(cornerRadius: 20)//.foregroundColor(Color("indigo"))
                    // )
         }

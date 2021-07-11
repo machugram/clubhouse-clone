@@ -40,8 +40,10 @@ struct RoomView: View {
                 }
                 .background(Color("bg")).ignoresSafeArea()
             }
+            .navigationBarItems(leading: Image(systemName: "back"))
+            
         //}
-        //.navigationBarHidden(true)
+            //.navigationBarBackButtonHidden(true)
     }
 }
 
@@ -72,47 +74,47 @@ struct Footer: View {
     @State var text : String
     var body: some View {
         VStack(alignment:.leading){
-            HStack{
-                Spacer()
-                RoundedRectangle(cornerRadius: 30)
-                    .frame(width:100, height:5)
-                    .foregroundColor(.white)
-                Spacer()
-            }
-            .padding(.top, 20)
+//            HStack{
+//                Spacer()
+//                RoundedRectangle(cornerRadius: 30)
+//                    .frame(width:100, height:5)
+//                    .foregroundColor(.white)
+//                Spacer()
+//            }
+            //.padding(.top, 20)
             
-            HStack{
-                HStack{
-                    TextField("Type a thought here...", text: $text)
-                        .frame(maxWidth:.infinity, alignment: .leading)
-                        .padding(.vertical, 18)
-                        .padding(.horizontal, 20)
-                        .foregroundColor(Color("bg"))
-                    
-                }
-                .background(
-                    RoundedRectangle(cornerRadius: 30)
-                        .frame(maxWidth:.infinity)
-                        .opacity(0.5)
-                        .foregroundColor(Color("bg"))
-                )
-                
-                Spacer()
-                
-                HStack{
-                    Image(systemName: "paperplane.fill")
-                        .foregroundColor(Color("indigo"))
-                        .padding(15)
-                        .font(.title3)
-                }
-                .frame(width:50, height:50)
-                .background(Color.white)
-                .cornerRadius(29)
-                .padding(.leading, 10)
-                
-            }
-            .padding(.vertical,10)
-            .padding(.horizontal,20)
+//            HStack{
+//                HStack{
+//                    TextField("Type a thought here...", text: $text)
+//                        .frame(maxWidth:.infinity, alignment: .leading)
+//                        .padding(.vertical, 18)
+//                        .padding(.horizontal, 20)
+//                        .foregroundColor(Color("bg"))
+//
+//                }
+//                .background(
+//                    RoundedRectangle(cornerRadius: 30)
+//                        .frame(maxWidth:.infinity)
+//                        .opacity(0.5)
+//                        .foregroundColor(Color("bg"))
+//                )
+//
+//                Spacer()
+//
+//                HStack{
+//                    Image(systemName: "paperplane.fill")
+//                        .foregroundColor(Color("indigo"))
+//                        .padding(15)
+//                        .font(.title3)
+//                }
+//                .frame(width:50, height:50)
+//                .background(Color.white)
+//                .cornerRadius(29)
+//                .padding(.leading, 10)
+//
+//            }
+           // .padding(.vertical,10)
+            //.padding(.horizontal,20)
             
             HStack{
                 Text("✌🏽 Leave quitely")
@@ -149,8 +151,9 @@ struct Footer: View {
             }
             .padding()
             .padding(.bottom, 15)
-            .background(Color.white)
+            //.background(Color.white)
             .cornerRadius(30)
+            .foregroundColor(Color("bg"))
             
             
             

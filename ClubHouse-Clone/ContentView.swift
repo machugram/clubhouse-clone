@@ -12,7 +12,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         NavigationView {
-            ZStack {
+            ZStack(alignment: .bottom) {
                 ScrollView(.vertical, showsIndicators: false){
                     HeaderView()
                     TagsView()
@@ -21,9 +21,13 @@ struct ContentView: View {
                 }
                 Spacer()
                 TabBarView()
-                    .frame(width: 370)
-                    .position(x: 190.0, y: 720.0)
-            }        .navigationBarHidden(true)
+                    .cornerRadius(20)
+                    .padding(.bottom, 0)
+                    //.background(Color.white)
+                    .foregroundColor(Color("bg"))
+            }
+            .navigationBarHidden(true)
+            .ignoresSafeArea(edges: .bottom)
 
         }
         
@@ -77,10 +81,10 @@ struct ScheduledMeeting:View {
 struct HappeningNow : View {
     var body: some View {
         VStack(alignment:.leading){
-            Text("Happening now").font(.headline).padding(.bottom , 5)
-            CurrentRoomView(roomname: "Startup club", description: "Pitch your startup ideas\n to VC Entrepreneurs", participantNumber: "354")
-            CurrentRoomView(roomname: "Startup club", description: "Pitch your startup ideas\n to VC Entrepreneurs", participantNumber: "354")
-            CurrentRoomView(roomname: "Startup club", description: "Pitch your startup ideas to VC \n Entrepreneurs", participantNumber: "354")
+            Text("Happening Now").font(.headline).padding(.bottom , 5)
+            CurrentRoomView(roomname: "GRAPHQL VS REST", description: "When to use what in your api", participants: "400",speakers: "15")
+            CurrentRoomView(roomname: "AP13", description: "Accra and Packaging. Episode 13", participants: "354", speakers: "40")
+            CurrentRoomView(roomname: "WHY GOROOT AND NOT GROOT?", description: "Jaybahd, O'Kenneth,Reggie,Google", participants: "54", speakers: "2")
         }.padding()
     }
 }
