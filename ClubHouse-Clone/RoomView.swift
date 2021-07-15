@@ -10,18 +10,25 @@ let columns = [
     GridItem(.adaptive(minimum: 100))
 ]
 var  people :  [Person] = [
-    Person(name:"Ruth"),
+    Person(name:"Akua"),
     Person(name:"Mercy"),
-    Person(name :"Rich"),
-    Person(name:"Manor"),
-    Person(name:"Leslie"),
-    Person(name: "Daniel" ),
-    Person(name:"Tim"),
-    Person(name:"Sarah"),
-    Person(name:"Samantha")
+    Person(name :"Yaa"),
+    Person(name:"Asantewaa"),
+    Person(name:"Mark"),
+    Person(name: "Vera" ),
+    Person(name:"Tim Cook"),
+    Person(name:"Emma "),
+    Person(name:"Novall")
 ]
 
 struct RoomView: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+
+        var btnBack : some View { Button(action: {
+            self.presentationMode.wrappedValue.dismiss()
+            }) {
+            }
+        }
     var body: some View {
         //NavigationView{
             GeometryReader { geometry in
@@ -43,7 +50,8 @@ struct RoomView: View {
             .navigationBarItems(leading: Image(systemName: "back"))
             
         //}
-            //.navigationBarBackButtonHidden(true)
+            .navigationBarBackButtonHidden(true)
+            .navigationBarItems(leading: btnBack)
     }
 }
 
@@ -54,7 +62,7 @@ struct Navbar: View {
     var body: some View {
         HStack{
             //NavigationLink(destination:ContentView()){
-                Image(systemName: "chevron.down").font(.title3).foregroundColor(Color.black)
+//                Image(systemName: "chevron.down").font(.title3).foregroundColor(Color.black)
            // }
             Spacer()
             Text("Leveling up as a software engineer")
@@ -74,48 +82,6 @@ struct Footer: View {
     @State var text : String
     var body: some View {
         VStack(alignment:.leading){
-//            HStack{
-//                Spacer()
-//                RoundedRectangle(cornerRadius: 30)
-//                    .frame(width:100, height:5)
-//                    .foregroundColor(.white)
-//                Spacer()
-//            }
-            //.padding(.top, 20)
-            
-//            HStack{
-//                HStack{
-//                    TextField("Type a thought here...", text: $text)
-//                        .frame(maxWidth:.infinity, alignment: .leading)
-//                        .padding(.vertical, 18)
-//                        .padding(.horizontal, 20)
-//                        .foregroundColor(Color("bg"))
-//
-//                }
-//                .background(
-//                    RoundedRectangle(cornerRadius: 30)
-//                        .frame(maxWidth:.infinity)
-//                        .opacity(0.5)
-//                        .foregroundColor(Color("bg"))
-//                )
-//
-//                Spacer()
-//
-//                HStack{
-//                    Image(systemName: "paperplane.fill")
-//                        .foregroundColor(Color("indigo"))
-//                        .padding(15)
-//                        .font(.title3)
-//                }
-//                .frame(width:50, height:50)
-//                .background(Color.white)
-//                .cornerRadius(29)
-//                .padding(.leading, 10)
-//
-//            }
-           // .padding(.vertical,10)
-            //.padding(.horizontal,20)
-            
             HStack{
                 Text("✌🏽 Leave quitely")
                     .font(.headline)
@@ -151,7 +117,6 @@ struct Footer: View {
             }
             .padding()
             .padding(.bottom, 15)
-            //.background(Color.white)
             .cornerRadius(30)
             .foregroundColor(Color("bg"))
             
@@ -215,7 +180,7 @@ struct PersonView : View {
                     .background(RoundedRectangle(cornerRadius: 30)
                                     .frame(width:20, height:20)
                                     .foregroundColor(Color("indigo"))
-                    )//.hidden(false)
+                    )
                 
                 
                 Text(name)
@@ -228,17 +193,22 @@ struct PersonView : View {
 }
 
 
-extension View {
-    func hidden(_ shouldHide: Bool) -> some View {
-        opacity(shouldHide ? 0 : 1)
-    }
-}
-
-
 
 
 struct RoomView_Previews: PreviewProvider {
     static var previews: some View {
         RoomView()
+    }
+}
+
+
+extension UINavigationController: UIGestureRecognizerDelegate {
+    override open func viewDidLoad() {
+        super.viewDidLoad()
+        interactivePopGestureRecognizer?.delegate = self
+    }
+
+    public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        return viewControllers.count > 1
     }
 }
